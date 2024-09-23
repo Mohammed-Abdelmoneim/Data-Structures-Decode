@@ -8,7 +8,7 @@ While some programming languages use 1-based array indexing, it is standard prac
 
 > which is better, 1-based or 0-based? -> It doesn't matter!
 
-> ![NOTE]
+> [!NOTE]
 >
 > - On declaring an Array we must know its **size**
 > - So far, you should know why yourself, partially because of the indexing that needs all data to be close and one after another
@@ -64,4 +64,4 @@ Any data structure consists of two key components: infrastructure and Operations
 > [!TIP]
 > Before using any method or function for arrays or memory manipulation, it's crucial to thoroughly understand it. Built-in methods or functions might involve more operations and validations than needed for your specific scope or may not behave as expected, whereas a simple for loop could often be more efficient.
 
-> ![implemention](resize.png) > ![implemention](getAt.png)
+> ![implemention](resize.png) ![implemention](getAt.png)
