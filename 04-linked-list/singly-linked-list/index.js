@@ -9,7 +9,7 @@ singlelist.insertLast(1);
 singlelist.insertLast(2);
 singlelist.insertLast(3);
 singlelist.printList();
-
+console.log("l: ", singlelist.length);
 singlelist.insertAfter(singlelist.find(2), 98);
 singlelist.printList();
 

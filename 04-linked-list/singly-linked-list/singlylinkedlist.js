@@ -10,11 +10,14 @@ class LinkedListIterator {
   }
 
   data() {
+    if (this.currentNode == null) return null;
     return this.currentNode.data;
   }
 
   next() {
-    this.currentNode = this.currentNode.next;
+    if (this.currentNode != null) {
+      this.currentNode = this.currentNode.next;
+    }
     return this;
   }
 
@@ -34,7 +37,18 @@ class SingleLinkedList {
     this.tail = node;
   }
 
+  // canInsert(_data) {
+  //   if (this.unique && this.isExist(_data)) {
+  //     console.log(_data, "already exist!");
+  //     return false;
+  //   } else {
+  //     return true;
+  //   }
+  // }
+
   insertLast(_data) {
+    // if (!canInsert(_data)) return;
+
     const newNode = new LinkedListNode(_data);
     if (this.head === null) {
       this.head = newNode;
@@ -47,6 +61,8 @@ class SingleLinkedList {
   }
 
   insertAfter(node, _data) {
+    //if (!canInsert(_data)) return;
+
     const newNode = new LinkedListNode(_data);
     newNode.next = node.next;
     node.next = newNode;
@@ -90,6 +106,7 @@ class SingleLinkedList {
   }
 
   insertBefore(node, _data) {
+    //if (!canInsert(_data)) return;
     const newnode = new LinkedListNode(_data);
     newnode.next = node;
 
